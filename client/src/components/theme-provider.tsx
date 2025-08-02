@@ -11,7 +11,7 @@ type ThemeProviderContextType = {
 const ThemeProviderContext = createContext<ThemeProviderContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>("light");
+  const [theme, setTheme] = useState<Theme>("galactic");
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("portfolio-theme") as Theme;
@@ -34,7 +34,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   }, [theme]);
 
   const toggleTheme = () => {
-    const themeOrder: Theme[] = ["light", "dark", "galactic"];
+    const themeOrder: Theme[] = ["galactic", "light", "dark"];
     const currentIndex = themeOrder.indexOf(theme);
     const nextTheme = themeOrder[(currentIndex + 1) % themeOrder.length];
     setTheme(nextTheme);
