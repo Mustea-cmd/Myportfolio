@@ -6,7 +6,7 @@ import { ProjectPortfolio } from "@/components/portfolio/project-portfolio";
 import { ExperienceTimeline } from "@/components/portfolio/experience-timeline";
 import { AboutSection } from "@/components/portfolio/about-section";
 import { ResumeSection } from "@/components/portfolio/resume-section";
-import { BlogSection } from "@/components/portfolio/blog-section";
+
 import { TestimonialsSection } from "@/components/portfolio/testimonials-section";
 import { ContactSection } from "@/components/portfolio/contact-section";
 import { useTheme } from "@/components/theme-provider";
@@ -37,7 +37,6 @@ export default function Home() {
         <ExperienceTimeline />
         <AboutSection />
         <ResumeSection />
-        <BlogSection />
         <TestimonialsSection />
         <ContactSection />
 
